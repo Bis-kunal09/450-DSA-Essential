@@ -1,16 +1,13 @@
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) {
-        int i=0;
-        int j=1;
-        for(int z=1;z<nums.size();z++){
-            if(nums[z]!=nums[i]){
-                swap(nums[z],nums[j]);
-                i++;
-                j++;
+    int removeDuplicates(vector<int>& arr) {
+        int to_swap=0;
+        for(int i=1;i<arr.size();i++){
+            if(arr[i]!=arr[to_swap]){
+                to_swap++;
+                swap(arr[to_swap],arr[i]);
             }
         }
-        return i+1;
-        
+        return to_swap+1;
     }
 };
