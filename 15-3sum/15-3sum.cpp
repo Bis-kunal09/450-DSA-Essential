@@ -14,7 +14,7 @@ public:
                
             int j=i+1;
             int k=nums.size()-1;
-            cout<<i<<j<<k<<endl;
+           
             while(j<k){
                 if(nums[i]+nums[j]+nums[k]==0){
                     vector<int> fans;
@@ -22,7 +22,7 @@ public:
                     fans.push_back(nums[j]);
                     fans.push_back(nums[k]);
                     ans.push_back(fans);
-                    cout<<"enter"<<i<<j<<k<<endl;
+                    
                     while (j<k&&nums[j]==nums[j+1]) j++;
                     while (j<k&&nums[k]==nums[k-1]) k--;
                     j++; k--;
